@@ -1,0 +1,81 @@
+/* top header part social media */
+body{
+    margin: 10px 100px;
+}
+
+#topheader{
+    float: right;
+    padding: 5px 100px 10px 10px;
+    
+   
+}
+
+#topheader .socialmedia{
+    display: flex;
+    box-shadow: 0 2px black;
+}
+
+#topheader .socialmedia a{
+    padding: 0 10px;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+#topheader .socialmedia .media1{
+    color: blue;
+    
+}
+#topheader .socialmedia .media2{
+    color: rgb(228, 64, 95);  
+}
+#topheader .socialmedia .media3{
+    color: rgb(0, 106, 255);
+    
+}
+
+
+.apillogo{
+    max-width: 200px;
+    
+}
+
+.apillogo .logo img{
+    width: 100%;
+}
+
+#body{
+    margin: 0 200px;
+    margin-top: 50px;
+}
+
+#body h1{
+    font-weight: 800;
+    font-size:80px;
+    padding: 0;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+#body h2{
+    font-weight:normal;
+    font-size:40px;
+    padding: 0;
+    margin: 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+
+#body p{
+    font-weight:lighter;
+    font-size:25px;
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+    margin-right: 80px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-stretch: expanded;
+   line-height: 160%;
+    
+    
+    
+}
