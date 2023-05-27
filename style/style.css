@@ -59,3 +59,74 @@ footer p{
     text-align: end;
     justify-content: end;
 }
+
+
+@media (max-width: 952px){
+    .header .socialmedia a{
+        font-size: 20px; 
+    }
+    .body h1{
+        
+        font-size: 60px;
+    
+    }
+    .body h2{
+        
+        font-size: 35px;
+       
+        
+    }
+    
+    .body p{
+        font-size: 20px;
+       
+        
+    }
+
+}
+
+@media (max-width: 858px){
+    .header .socialmedia a{
+        font-size: 18px; 
+    }
+    .body h1{
+        
+        font-size: 40px;
+    
+    }
+    .body h2{
+        
+        font-size: 30px;
+       
+        
+    }
+    
+    .body p{
+        font-size: 18px;
+       
+        
+    }
+}
+
+@media (max-width: 375px){
+    .header .socialmedia a{
+        font-size: 10px; 
+    }
+    .body h1{
+        
+        font-size: 20px;
+    
+    }
+    .body h2{
+        
+        font-size: 15px;
+       
+        
+    }
+    
+    .body p{
+        font-size: 8px;
+       
+        
+    }
+}
