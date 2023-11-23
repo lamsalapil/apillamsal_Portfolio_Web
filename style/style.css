@@ -25,18 +25,18 @@ html{
 
 .body h1{
     font-weight: bolder;
-    font-size: 80px;
+    font-size: 60px;
 
 }
 .body h2{
     font-weight: bolder;
-    font-size: 50px;
+    font-size: 40px;
     padding-bottom: 30px;
     
 }
 
 .body p{
-    font-size: 30px;
+    font-size: 20px;
    
     
 }
@@ -71,12 +71,12 @@ footer p{
     }
     .body h1{
         
-        font-size: 60px;
+        font-size: 50px;
     
     }
     .body h2{
         
-        font-size: 35px;
+        font-size: 30px;
        
         
     }
