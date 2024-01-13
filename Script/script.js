@@ -1,5 +1,5 @@
 function openPDFInNewTab() {
-    const pdfUrl = './photo/APIL LAMSAL Resume.pdf';
+    const pdfUrl = './photo/Resume.pdf'
     const newTab = window.open(pdfUrl, '_blank');
 
     // Check if the new tab is blocked by the browser's popup blocker
