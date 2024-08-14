@@ -134,3 +134,87 @@ footer {
         font-size: 8px;
     }
 }
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.7); /* Black with transparency */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal content (the iframe) */
+.modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 900px;
+    height: 100vh; /* Set height for iframe content */
+    position: relative;
+}
+
+/* Close button */
+.close {
+    color: #fcfcfc;
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.intro-section {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adjust the gap to bring the image closer to the text */
+}
+
+.text-content {
+    margin-right: 500pX;
+}
+
+.profile-image {
+    width: 150px; /* Adjust size as needed */
+    height: 150px; /* Adjust size as needed */
+    border-radius: 60%;
+    object-fit: cover;
+}
+
+.body p {
+    margin-top: 10px;
+}
+.text-container {
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}

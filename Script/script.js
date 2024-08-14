@@ -1,15 +1,44 @@
-function openPDFInNewTab() {
-    const pdfUrl = './photo/Resume.pdf'
-    const newTab = window.open(pdfUrl, '_blank');
+function openPDFInModal(event) {
+    event.preventDefault(); // Prevent default link behavior
 
-    // Check if the new tab is blocked by the browser's popup blocker
-    if (!newTab || newTab.closed || typeof newTab.closed === 'undefined') {
-        alert('The PDF viewer was blocked. Please check your browser settings.');
+    const pdfUrl = './photo/Resume.pdf'; // The PDF file URL
+    const modal = document.getElementById('pdfModal');
+    const iframe = document.getElementById('pdfIframe');
+
+    // Set the PDF source to the iframe
+    iframe.src = pdfUrl + '#toolbar=0'; // Disable toolbar if needed
+
+    // Display the modal
+    modal.style.display = "flex";
+}
+
+function closeModal() {
+    const modal = document.getElementById('pdfModal');
+    const iframe = document.getElementById('pdfIframe');
+
+    // Hide the modal
+    modal.style.display = "none";
+
+    // Clear the iframe source when closing (optional)
+    iframe.src = "";
+}
+
+// Close the modal if the user clicks outside the modal content
+window.onclick = function(event) {
+    const modal = document.getElementById('pdfModal');
+    if (event.target == modal) {
+        closeModal();
     }
 }
-function trackClick() {
-    // Simulate tracking (replace with actual tracking logic)
-    const clickCount = parseInt(localStorage.getItem('clickCount')) || 0;
-    localStorage.setItem('clickCount', clickCount + 1);
-    console.log(`Button clicked ${clickCount + 1} times.`);
+
+
+const texts = ['ASP.NET Core / MVC','C#', 'Javascript / Knockout.js', 'MS Sql' ];
+let index = 0;
+
+function changeText() {
+    const element = document.getElementById('dynamic-text');
+    element.textContent = texts[index];
+    index = (index + 1) % texts.length;
 }
+
+setInterval(changeText, 3000);
