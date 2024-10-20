@@ -32,7 +32,7 @@ window.onclick = function(event) {
 }
 
 
-const texts = ['ASP.NET Core / MVC','C#', 'Javascript / Knockout.js', 'MS Sql' ];
+const texts = ['ASP.NET Core / MVC','C#', 'Javascript / Knockout.js', 'MS Sql', 'MAUI Mobile Application' ];
 let index = 0;
 
 function changeText() {
