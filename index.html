@@ -1,126 +1,349 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apil Lamsal - Web Developer</title>
-
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Apil Lamsal - A passionate web developer specializing in .NET technologies. Explore my industry projects and contributions to open source.">
-    <meta name="keywords" content="Apil Lamsal, Web Developer, .NET Developer, GitHub, Open Source, Infomax College, IT and Management, Nepali Developer, Software Developer, Nepal Web Developer, Asian Web Developer, Lamsal Developer, Nepali MAUI Developer, Mobile Application Developer from Nepal">
-    <meta name="author" content="Apil Lamsal">
-
-    <!-- Open Graph Meta Tags (for social media sharing) -->
-    <meta property="og:title" content="Apil Lamsal - Web Developer">
-    <meta property="og:description" content="Explore the work and projects of Apil Lamsal, a .NET specialist and open-source contributor.">
-    <meta property="og:image" content="/photo/Apil.jpg">
-    <meta property="og:url" content="https://apillamsal.com.np">
-    <meta property="og:type" content="website">
-
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Apil Lamsal - Web Developer">
-    <meta name="twitter:description" content="Explore the work and projects of Apil Lamsal, a .NET specialist and open-source contributor.">
-    <meta name="twitter:image" content="/photo/Apil.jpg">
-
-    <!-- Favicon -->
-    <link rel="icon" href="/photo/Apil.jpg">
-
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="./fontawesome/css/all.css">
-    <script src="./fontawesome/js/all.js"></script>
-
-    <!-- Google AdSense -->
-    <meta name="google-adsense-account" content="ca-pub-8340945520714657">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8340945520714657"
-     crossorigin="anonymous"></script>
-</head>
-<body class="bg-gray-100">
-    <section class="container mx-auto py-8">
-        <div class="flex justify-center mb-6">
-            <div class="flex space-x-4">
-                <a href="https://www.facebook.com/profile.php?id=100009810600196" class="text-blue-600" title="Facebook">
-                    <i class="fa-brands fa-facebook fa-2x"></i>
-                </a>
-                <a href="https://www.instagram.com/apil_lamsal/" class="text-pink-600" title="Instagram">
-                    <i class="fa-brands fa-instagram fa-2x"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/apil25/" class="text-blue-700" title="LinkedIn">
-                    <i class="fa-brands fa-linkedin fa-2x"></i>
-                </a>
-                <a href="https://github.com/lamsalapil" class="text-gray-900" title="GitHub">
-                    <i class="fa-brands fa-github fa-2x"></i>
-                </a>
-                <a href="mailto:lamsalapil@gmail.com" class="text-red-500" title="Email">
-                    <i class="fas fa-envelope fa-2x"></i>
-                </a>
-                <a href="#" onclick="openPDFInModal(event)" class="text-gray-700" title="Resume">
-                    <i class="fas fa-file-pdf fa-2x"></i>
-                </a>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Apil Lamsal - Portfolio</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+    </head>
+    <body class="bg-gray-100 text-gray-800">
+        <header class="fixed w-full bg-white shadow-md z-10">
+            <nav class="container mx-auto px-6 lg:px-12 py-3">
+                <div class="flex justify-between items-center">
+                    <a href="/index.html" class="text-xl font-bold">Apil Lamsal</a>
+                    <div class="hidden md:flex space-x-4">
+                        <a href="/index.html" class="nav-link">Home</a>
+                        <a href="#about" class="nav-link">About</a>
+                        <a href="#skills" class="nav-link">Skills</a>
+                        <a href="/pages/project.html" class="nav-link">Projects</a>
+                    </div>
+                    <button id="menu-toggle" class="md:hidden"
+                        aria-label="Toggle menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6"
+                            fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+            <div id="mobile-menu" class="md:hidden hidden">
+                <a href="/index.html"
+                    class="block py-2 px-4 text-sm hover:bg-gray-200">Home</a>
+                <a href="#about"
+                    class="block py-2 px-4 text-sm hover:bg-gray-200">About</a>
+                <a href="#skills"
+                    class="block py-2 px-4 text-sm hover:bg-gray-200">Skills</a>
+                <a href="/pages/project.html"
+                    class="block py-2 px-4 text-sm hover:bg-gray-200">Projects</a>
             </div>
-        </div>
-    </section>
+        </header>
 
-    <div id="pdfModal" class="fixed inset-0 bg-gray-900 bg-opacity-75 hidden justify-center items-center">
-        <div class="bg-white p-8 rounded-lg max-w-2xl w-full">
-            <span class="text-gray-900 text-2xl font-bold cursor-pointer float-right" onclick="closeModal()">&times;</span>
-            <iframe id="pdfIframe" class="w-full h-96" src=""></iframe>
-        </div>
-    </div>
+        <main>
+            <section id="home"
+                class="min-h-screen flex items-center justify-center bg-gray-100 px-6 lg:px-12">
+                <div
+                    class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+                    <div class="md:w-1/2 mb-8 md:mb-0">
+                        <div class="relative w-80 h-80 mx-auto md:w-96 md:h-96">
+                            <img src="/photo/Apil.jpg" alt="Apil Lamsal"
+                                class="rounded-full object-cover w-full h-full shadow-lg">
+                            <div
+                                class="absolute inset-0 rounded-full opacity-20 blur-2xl"></div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 text-center md:text-left">
+                        <h1 class="text-4xl md:text-6xl font-bold mb-4">Apil
+                            Lamsal</h1>
+                        <p id="job-title" class="text-xl md:text-2xl mb-8">Web
+                            Developer &amp; Designer</p>
+                        <a href="#contact"
+                            class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">
+                            Contact Me
+                        </a>
+                    </div>
+                </div>
+            </section>
 
-    <section class="container mx-auto p-4">
-        <div class="bg-white p-8 rounded-lg shadow-lg">
-            <div class="text-center mb-4">
-                <h1 class="text-4xl font-bold text-gray-900">Hi.</h1>
-                <h2 class="text-2xl text-gray-700">I am Apil Lamsal.</h2>
+            <section id="about"
+                class="min-h-screen flex items-center justify-center py-20 bg-white">
+                <div class="container mx-auto px-6 lg:px-12">
+                    <h2 class="text-3xl font-bold mb-8 text-center">About
+                        Me</h2>
+                    <p class="text-lg mb-4">
+                        Hello! I'm Apil Lamsal, a passionate web developer and
+                        designer with a keen eye for creating beautiful and
+                        functional websites.
+                        With a strong foundation in HTML, CSS, and JavaScript, I
+                        strive to build responsive and user-friendly web
+                        applications.
+                    </p>
+                    <p class="text-lg">
+                        My goal is to combine my technical skills with creative
+                        design to deliver exceptional digital experiences.
+                        I'm always eager to learn new technologies and stay
+                        up-to-date with the latest web development trends.
+                    </p>
+                </div>
+            </section>
+
+            <section id="skills"
+                class="min-h-screen flex items-center justify-center py-20 bg-gray-100">
+                <div class="container mx-auto px-6 lg:px-12">
+                    <h2 class="text-3xl font-bold mb-8 text-center">Skills</h2>
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="bg-white rounded-lg p-6 shadow-md">
+                            <h3 class="text-xl font-semibold mb-4">HTML</h3>
+                            <div
+                                class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+                                <div class="bg-blue-600 h-2.5 rounded-full"
+                                    style="width: 90%"></div>
+                            </div>
+                            <p class="text-gray-600">Advanced</p>
+                        </div>
+                        <div class="bg-white rounded-lg p-6 shadow-md">
+                            <h3 class="text-xl font-semibold mb-4">CSS</h3>
+                            <div
+                                class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+                                <div class="bg-blue-600 h-2.5 rounded-full"
+                                    style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg p-6 shadow-md">
+                            <h3
+                                class="text-xl font-semibold mb-4">JavaScript</h3>
+                            <div
+                                class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+                                <div class="bg-blue-600 h-2.5 rounded-full"
+                                    style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg p-6 shadow-md">
+                            <h3 class="text-xl font-semibold mb-4">Tailwind
+                                CSS</h3>
+                            <div
+                                class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+                                <div class="bg-blue-600 h-2.5 rounded-full"
+                                    style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg p-6 shadow-md">
+                            <h3 class="text-xl font-semibold mb-4">Asp.Net</h3>
+                            <div
+                                class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+                                <div class="bg-blue-600 h-2.5 rounded-full"
+                                    style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg p-6 shadow-md">
+                            <h3 class="text-xl font-semibold mb-4">C#</h3>
+                            <div
+                                class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+                                <div class="bg-blue-600 h-2.5 rounded-full"
+                                    style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg p-6 shadow-md">
+                            <h3 class="text-xl font-semibold mb-4">MS SQL</h3>
+                            <div
+                                class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+                                <div class="bg-blue-600 h-2.5 rounded-full"
+                                    style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="min-h-screen py-20 bg-white">
+                <div class="container mx-auto px-6 lg:px-12">
+                    <h2
+                        class="text-3xl font-bold mb-8 text-center">Projects</h2>
+                    <div class="space-y-20">
+                        <div
+                            class="flex flex-col md:flex-row items-center gap-8">
+                            <div class="w-full md:w-1/2">
+                                <img src="/placeholder.svg?height=300&width=400"
+                                    alt="E-commerce Website"
+                                    class="w-full h-auto rounded-lg shadow-md">
+                            </div>
+                            <div class="w-full md:w-1/2">
+                                <h3 class="text-2xl font-bold mb-4">E-commerce
+                                    Website</h3>
+                                <p class="text-gray-600 mb-4">A fully responsive
+                                    online store built with React and Node.js.
+                                    This project showcases my ability to create
+                                    dynamic, user-friendly interfaces and
+                                    integrate them with robust backend
+                                    systems.</p>
+                                <a href="#"
+                                    class="inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300">View
+                                    Project</a>
+                            </div>
+                        </div>
+                        <div
+                            class="flex flex-col md:flex-row-reverse items-center gap-8">
+                            <div class="w-full md:w-1/2">
+                                <img src="/placeholder.svg?height=300&width=400"
+                                    alt="Portfolio Website"
+                                    class="w-full h-auto rounded-lg shadow-md">
+                            </div>
+                            <div class="w-full md:w-1/2">
+                                <h3 class="text-2xl font-bold mb-4">Portfolio
+                                    Website</h3>
+                                <p class="text-gray-600 mb-4">A personal
+                                    portfolio showcasing my projects and skills.
+                                    This website demonstrates my proficiency in
+                                    front-end development and my eye for
+                                    design.</p>
+                                <a href="#"
+                                    class="inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300">View
+                                    Project</a>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button id="show-more"
+                                class="bg-gray-200 text-gray-800 px-6 py-3 rounded-full hover:bg-gray-300 transition duration-300">Show
+                                More</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="bg-gray-800 text-white py-8">
+            <div class="container mx-auto px-6 lg:px-12">
+                <div
+                    class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="mb-4 md:mb-0">
+                        <p>&copy; 2023 Apil Lamsal. All rights reserved.</p>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com" target="_blank"
+                            rel="noopener noreferrer"
+                            class="hover:text-blue-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="feather feather-github"><path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            <span class="sr-only">GitHub</span>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank"
+                            rel="noopener noreferrer"
+                            class="hover:text-blue-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="feather feather-linkedin"><path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect
+                                    x="2" y="9" width="4"
+                                    height="12"></rect><circle cx="4" cy="4"
+                                    r="2"></circle></svg>
+                            <span class="sr-only">LinkedIn</span>
+                        </a>
+                        <a href="mailto:apil.lamsal@example.com"
+                            class="hover:text-blue-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="feather feather-mail"><path
+                                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline
+                                    points="22,6 12,13 2,6"></polyline></svg>
+                            <span class="sr-only">Email</span>
+                        </a>
+                    </div>
+                </div>
             </div>
+        </footer>
 
-            <p class="text-gray-700 text-lg mb-4">
-                I hold a Bachelor's degree in IT and Management from Infomax College of IT and Management, earned in 2023. Currently, I am actively engaged as a web developer, specializing in 
-                <span id="dynamic-text" class="text-indigo-600 font-semibold">.Net</span> technologies.
-            </p>
+        <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
 
-            <p class="text-gray-700 text-lg mb-4">
-                Active contributor to open source. Check out my work on
-                <a href="https://github.com/lamsalapil" class="text-indigo-600 underline">GitHub</a>. Outside of coding, I enjoy Travelling, Photography.
-            </p>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
 
-            <p class="text-gray-700 text-lg">
-                Explore my industry projects on 
-                <a href="#" class="text-indigo-600 underline">My Work</a> and discover their impact.
-            </p>
-        </div>
-    </section>
+        // Active section highlighting
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
 
-    <!-- Google AdSense Ad -->
-    <section class="container mx-auto my-8">
-        <div class="bg-white p-4 rounded-lg shadow-lg">
-            <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-8340945520714657"
-                data-ad-slot="4996469599"
-                data-ad-format="auto"
-                data-full-width-responsive="true"></ins>
-            
-        </div>
-    </section>
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - sectionHeight / 3) {
+                    current = section.getAttribute('id');
+                }
+            });
 
-    <footer class="container mx-auto p-4 text-center">
-        <div class="flex justify-center space-x-8">
-            <a href="index.html" class="text-gray-600 hover:text-black">Home</a>
-            <a href="#" class="text-gray-600 hover:text-black">Projects</a>
-        </div>
-        <p class="text-gray-600 mt-4">&copy; 2023, apillamsal.com.np</p>
-    </footer>
-    
+            navLinks.forEach(link => {
+                link.classList.remove('text-blue-500');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('text-blue-500');
+                }
+            });
+        });
 
-    <script src="./Script/script.js"></script>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
+        // Job title rotation
+        const jobTitles = [
+            "Web Developer & Designer",
+            ".NET Developer",
+            "MAUI Developer",
+            "Full Stack Developer",
+            "UI/UX Designer"
+        ];
+        let currentTitleIndex = 0;
+        const jobTitleElement = document.getElementById('job-title');
+
+        function updateJobTitle() {
+            jobTitleElement.textContent = jobTitles[currentTitleIndex];
+            currentTitleIndex = (currentTitleIndex + 1) % jobTitles.length;
+        }
+
+        setInterval(updateJobTitle, 20000); // Change every 20 seconds
+
+        // Show More Projects functionality
+        const showMoreButton = document.getElementById('show-more');
+        showMoreButton.addEventListener('click', () => {
+            const newProject = document.createElement('div');
+            newProject.className = 'flex flex-col md:flex-row items-center gap-8 mt-20';
+            newProject.innerHTML = `
+                <div class="w-full md:w-1/2">
+                    <img src="/placeholder.svg?height=300&width=400" alt="Task Management App" class="w-full h-auto rounded-lg shadow-md">
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h3 class="text-2xl font-bold mb-4">Task Management App</h3>
+                    <p class="text-gray-600 mb-4">A web application for managing tasks and improving productivity. This project showcases my skills in creating intuitive user interfaces and implementing complex functionality.</p>
+                    <a href="#" class="inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300">View Project</a>
+                </div>
+            `;
+            showMoreButton.parentElement.insertAdjacentElement('beforebegin', newProject);
+            showMoreButton.style.display = 'none';
+        });
     </script>
-</body>
+    </body>
 </html>

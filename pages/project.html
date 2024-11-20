@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Apil Lamsal - Portfolio</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+    </head>
+    <body class="bg-gray-100 text-gray-800">
+        <header class="fixed w-full bg-white shadow-md z-10">
+            <nav class="container mx-auto px-6 lg:px-12 py-3">
+                <div class="flex justify-between items-center">
+                    <a href="/index.html" class="text-xl font-bold">Apil Lamsal</a>
+                    <div class="hidden md:flex space-x-4">
+                        <a href="/index.html" class="nav-link">Home</a>
+                        <a href="#about" class="nav-link">About</a>
+                        <a href="#skills" class="nav-link">Skills</a>
+                        <a href="/pages/project.html" class="nav-link">Projects</a>
+                    </div>
+                    <button id="menu-toggle" class="md:hidden"
+                        aria-label="Toggle menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6"
+                            fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+            <div id="mobile-menu" class="md:hidden hidden">
+                <a href="/index.html"
+                    class="block py-2 px-4 text-sm hover:bg-gray-200">Home</a>
+                <a href="#about"
+                    class="block py-2 px-4 text-sm hover:bg-gray-200">About</a>
+                <a href="#skills"
+                    class="block py-2 px-4 text-sm hover:bg-gray-200">Skills</a>
+                <a href="/pages/project.html"
+                    class="block py-2 px-4 text-sm hover:bg-gray-200">Projects</a>
+            </div>
+        </header>
+
+       
+    <main class="pt-16">
+        <section class="min-h-screen py-20 bg-gray-100">
+            <div class="container mx-auto px-6 lg:px-12">
+                <h1 class="text-4xl font-bold text-center mb-12">Projects</h1>
+                <div class="space-y-16">
+                    <div class="flex flex-col md:flex-row items-center gap-8">
+                        <div class="w-full md:w-1/2">
+                            <img src="/placeholder.svg?height=300&width=400" alt="E-commerce Website" class="w-full h-auto rounded-lg shadow-md">
+                        </div>
+                        <div class="w-full md:w-1/2">
+                            <h2 class="text-2xl font-bold mb-4">E-commerce Website</h2>
+                            <p class="text-gray-600 mb-4">A fully responsive online store built with React and Node.js. This project showcases my ability to create dynamic, user-friendly interfaces and integrate them with robust backend systems.</p>
+                            <a href="#" class="inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300">View Project</a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row-reverse items-center gap-8">
+                        <div class="w-full md:w-1/2">
+                            <img src="/placeholder.svg?height=300&width=400" alt="Portfolio Website" class="w-full h-auto rounded-lg shadow-md">
+                        </div>
+                        <div class="w-full md:w-1/2">
+                            <h2 class="text-2xl font-bold mb-4">Portfolio Website</h2>
+                            <p class="text-gray-600 mb-4">A personal portfolio showcasing my projects and skills. This website demonstrates my proficiency in front-end development and my eye for design.</p>
+                            <a href="#" class="inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300">View Project</a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row items-center gap-8">
+                        <div class="w-full md:w-1/2">
+                            <img src="/placeholder.svg?height=300&width=400" alt="Inventory Management System" class="w-full h-auto rounded-lg shadow-md">
+                        </div>
+                        <div class="w-full md:w-1/2">
+                            <h2 class="text-2xl font-bold mb-4">Inventory Management System</h2>
+                            <p class="text-gray-600 mb-4">An application for tracking and managing inventory levels, orders, and deliveries. Built using ASP.NET Core and SQL Server for optimal performance and scalability.</p>
+                            <a href="#" class="inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+        <footer class="bg-gray-800 text-white py-8">
+            <div class="container mx-auto px-6 lg:px-12">
+                <div
+                    class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="mb-4 md:mb-0">
+                        <p>&copy; 2023 Apil Lamsal. All rights reserved.</p>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com" target="_blank"
+                            rel="noopener noreferrer"
+                            class="hover:text-blue-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="feather feather-github"><path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            <span class="sr-only">GitHub</span>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank"
+                            rel="noopener noreferrer"
+                            class="hover:text-blue-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="feather feather-linkedin"><path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect
+                                    x="2" y="9" width="4"
+                                    height="12"></rect><circle cx="4" cy="4"
+                                    r="2"></circle></svg>
+                            <span class="sr-only">LinkedIn</span>
+                        </a>
+                        <a href="mailto:apil.lamsal@example.com"
+                            class="hover:text-blue-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="feather feather-mail"><path
+                                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline
+                                    points="22,6 12,13 2,6"></polyline></svg>
+                            <span class="sr-only">Email</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+       
+    </script>
+    </body>
+</html>
